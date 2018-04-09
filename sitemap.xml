@@ -10,12 +10,12 @@ layout: null
     {% endfor %}
 
     {% for page in site.pages %}
-    {% if page.layout != nil %}
-    {% if page.layout != 'redirect' %}
-    <url>
-        <loc>{{ site.url }}{{ page.url | remove: 'index.html' }}</loc>
-    </url>
-    {% endif %}
-    {% endif %}
+      {% if page.layout != nil %}
+        {% if page.layout != 'redirect' %}
+        <url>
+            <loc>{{ site.url }}{{ page.url | remove: 'index.html' }}</loc>
+        </url>
+        {% endif %}
+      {% endif %}
     {% endfor %}
 </urlset>
